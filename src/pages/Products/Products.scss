@@ -1,0 +1,128 @@
+.products {
+  width: 90vw;
+  display: flex;
+  position: relative;
+  .left {
+    display: flex;
+    width: 15vw;
+    height: 80vh;
+    flex-direction: column;
+    margin: 5px 15px;
+    .categories {
+      margin-bottom: 15px;
+      span {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .item {
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+      }
+    }
+    .filter {
+      margin-bottom: 15px;
+      display: flex;
+      width: 60%;
+      flex-direction: column;
+      span {
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+    .sort {
+      margin-bottom: 15px;
+      span {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      .item {
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+      }
+    }
+  }
+  .right {
+    width: 84vw;
+    .categoriesData {
+      display: flex;
+      margin: 5px 0px;
+      span {
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        border-radius: 5px;
+        margin: 0px 7px;
+        border: 1px solid gray;
+        padding: 5px 10px;
+
+        .cancelIcon {
+          font-size: 14px;
+          margin-left: 5px;
+
+          &:hover {
+            color: red;
+            font-size: 15px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .productCarts {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      .card {
+        margin: 5px;
+        width: 130px;
+        border: 1px solid gray;
+        .cardImage {
+          width: 130px;
+          img {
+            width: 130px;
+            height: 200px;
+            background-size: cover;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          .secondImg {
+            display: none;
+          }
+          &:hover {
+            .firstImg {
+              display: none;
+            }
+            .secondImg {
+              display: block;
+            }
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .cardContent {
+          padding: 5px 15px;
+          h1 {
+            font-size: 13px;
+            font-weight: lighter;
+          }
+          .cardPrice {
+            display: flex;
+            p:nth-child(0n + 1) {
+              text-decoration: line-through;
+              margin-right: 7px;
+            }
+            p {
+              font-size: 10px;
+              font-weight: lighter;
+            }
+          }
+        }
+      }
+    }
+  }
+}
