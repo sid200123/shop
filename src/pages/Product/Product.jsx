@@ -10,7 +10,6 @@ import "./Product.scss";
 
 const Product = () => {
   const location = useLocation();
-  console.log(location.state);
   const [imgNumber, setImgNumber] = useState(0);
   return (
     <div className="product">
