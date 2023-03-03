@@ -36,18 +36,18 @@
       justify-content: center;
       align-items: center;
       .link {
-        .linkIcon{
-          &:hover{
+        .linkIcon {
+          &:hover {
             color: #2879fe;
           }
         }
-        &:hover{
+        &:hover {
           color: #2879fe;
         }
         text-decoration: none;
         color: black;
         .cartIcon {
-            position: relative;
+          position: relative;
           span {
             font-size: 12px;
             width: 20px;

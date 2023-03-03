@@ -1,7 +1,6 @@
 .products {
   width: 90vw;
   display: flex;
-  position: relative;
   .left {
     display: flex;
     width: 15vw;
@@ -24,7 +23,7 @@
     .filter {
       margin-bottom: 15px;
       display: flex;
-      width: 60%;
+      width: 100%;
       flex-direction: column;
       span {
         font-size: 15px;
@@ -32,7 +31,6 @@
       }
     }
     .sort {
-      margin-bottom: 15px;
       span {
         font-size: 15px;
         font-weight: bold;
@@ -76,9 +74,11 @@
       flex-wrap: wrap;
       width: 100%;
       .card {
+        box-shadow: 1px 1px 1px gray;
         margin: 5px;
         width: 130px;
-        border: 1px solid gray;
+        overflow: hidden;
+        border-radius: 15px;
         .cardImage {
           width: 130px;
           img {

@@ -1,5 +1,5 @@
 import { CancelOutlined, CheckBox } from "@mui/icons-material";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Products.scss";
 
@@ -26,22 +26,64 @@ const Products = () => {
     "4",
     "5",
   ];
+  const [categories, setCategories] = useState({
+    men: false,
+    woman: false,
+    shoes: false,
+    watch: false,
+  });
+  const handleCategories = (e) => {
+    const name = e.target.name;
+    const status = e.target.checked;
+    setCategories({
+      ...categories,
+      [name]: status,
+    });
+  };
   return (
     <div className="products">
       <div className="left">
         <div className="categories">
           <span>Categories</span>
           <div className="item">
-            <input type="checkbox" /> Men
+            <input
+              type="checkbox"
+              name="men"
+              onChange={(e) => {
+                handleCategories(e);
+              }}
+            />{" "}
+            Men
           </div>
           <div className="item">
-            <input type="checkbox" /> Woman
+            <input
+              type="checkbox"
+              name="woman"
+              onChange={(e) => {
+                handleCategories(e);
+              }}
+            />{" "}
+            Woman
           </div>
           <div className="item">
-            <input type="checkbox" /> Shoes
+            <input
+              type="checkbox"
+              name="shoes"
+              onChange={(e) => {
+                handleCategories(e);
+              }}
+            />{" "}
+            Shoes
           </div>
           <div className="item">
-            <input type="checkbox" /> Watch
+            <input
+              type="checkbox"
+              name="watch"
+              onChange={(e) => {
+                handleCategories(e);
+              }}
+            />{" "}
+            Watch
           </div>
         </div>
         <div className="filter">
